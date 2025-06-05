@@ -19,6 +19,7 @@ def mapper(text):
 
 def reducer(key, values):
     yield (key, sum(values))
+```
 
 ### Key Characteristics
 - **Distributed Processing:** Splits work across multiple machines
