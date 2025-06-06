@@ -19,10 +19,12 @@ public class MaxTemperature {
 
     FileInputFormat.addInputPath(job, new Path(args[0]));
     FileOutputFormat.setOutputPath(job, new Path(args[1]));
-    
+
+    //Specifies the classes that implement the map() and reduce() functions. These classes contain the logic for processing data.
     job.setMapperClass(MaxTemperatureMapper.class);
     job.setReducerClass(MaxTemperatureReducer.class);
 
+    //Defines the data types of the output key and value produced by the job. The output key is Text (year), and the value is IntWritable (temperature).
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(IntWritable.class);
     

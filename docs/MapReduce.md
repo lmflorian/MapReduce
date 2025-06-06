@@ -52,3 +52,15 @@ def reducer(key, values):
     - Map emits (word, 1) for each occurrence.
     - Reduce sums all values for each word to get total count.
 
+## Usage
+### Assuming environment variables are set as follows:
+export JAVA_HOME=/usr/java/default
+export PATH=${JAVA_HOME}/bin:${PATH}
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+
+### Compile MaxTemperature.java and create a jar:
+$ bin/hadoop com.sun.tools.javac.Main *.java
+$ jar cf max.jar *.class
+
+### Run the application:
+$ hadoop jar max.jar MaxTemperature <inputDir> <OutputDir>
