@@ -68,5 +68,5 @@ jar cf max.jar *.class
 
 - **Run the application:**
 ```bash
-hadoop jar max.jar MaxTemperature <inputDir> <OutputDir>
+hadoop jar max.jar <MainClassName> <inputDir> <OutputDir>
 ```
