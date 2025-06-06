@@ -54,13 +54,19 @@ def reducer(key, values):
 
 ## Usage
 - **Assuming environment variables are set as follows:**
-  - export JAVA_HOME=/usr/java/default
-  - export PATH=${JAVA_HOME}/bin:${PATH}
-  - export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+```bash
+export JAVA_HOME=/usr/java/default
+export PATH=${JAVA_HOME}/bin:${PATH}
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+```
 
 - **Compile MaxTemperature.java and create a jar:**
-  $ bin/hadoop com.sun.tools.javac.Main *.java
-  $ jar cf max.jar *.class
+```bash
+bin/hadoop com.sun.tools.javac.Main *.java
+jar cf max.jar *.class
+```
 
 - **Run the application:**
-  $ hadoop jar max.jar MaxTemperature <inputDir> <OutputDir>
+```bash
+hadoop jar max.jar MaxTemperature <inputDir> <OutputDir>
+```
